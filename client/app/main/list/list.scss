@@ -1,0 +1,13 @@
+#userlist {
+  li.active {
+    background: #b1c2cc
+  }
+  li a:hover {
+    background-color: #d2e3ed
+  }
+  tr:hover {
+    cursor: pointer;
+    color: #1797BE;
+    font-weight: bold;
+  }
+}
