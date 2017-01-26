@@ -1,14 +1,39 @@
-div.navbar.navbar-default.navbar-static-top(ng-controller='NavbarController')
-  div.container
-    div.navbar-header
-      button.navbar-toggle(type='button', ng-click='nav.isCollapsed = !nav.isCollapsed')
-        span.sr-only Toggle navigation
-        span.icon-bar
-        span.icon-bar
-        span.icon-bar
-      a.navbar-brand(href='/') gen-apply
-
-    div#navbar-main.navbar-collapse.collapse(uib-collapse='nav.isCollapsed')
-      ul.nav.navbar-nav
-        li(ng-repeat='item in nav.menu', ui-sref-active='active')
-          a(ui-sref='{{item.state}}') {{item.title}}
+section#banner.banner
+  .bg-color
+    nav.navbar.navbar-default.navbar-fixed-top
+      .container
+        .col-md-12
+          .navbar-header
+            button.navbar-toggle(type='button', data-toggle='collapse', data-target='#myNavbar')
+              span.icon-bar
+              span.icon-bar
+              span.icon-bar
+            a.navbar-brand(href='#')
+              img.img-responsive(src='assets/images/logo.png', style='width: 140px; margin-top: -16px;')
+          #myNavbar.collapse.navbar-collapse.navbar-right
+            ul.nav.navbar-nav
+              li.active
+                a(href='#banner') Home
+              li
+                a(href='#contact') Contact
+              li
+                a(href='#register') Register
+              li.loginbtn
+                a(href='#') Login
+              li
+                a(href='#') Search
+    .container
+      .row
+        .banner-info
+          .banner-logo.text-center
+            img.img-responsive(src='assets/images/logo.png')
+          .banner-text.text-center
+            h1.white Healthcare at your desk!!
+            p
+              | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+              br
+              | tempor incididunt ut labore et dolore magna aliqua.
+            a.btn.btn-appoint(href='#register') Register Now.
+          .overlay-detail.text-center
+            a(href='#service')
+              i.fa.fa-angle-down

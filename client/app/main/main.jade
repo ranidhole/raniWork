@@ -1,17 +1,102 @@
-.container.w-xxl.w-auto-xs.ng-scope
-  .row
-    .col-lg-4.col-lg-offset-4
-      .wrapper.text-center
-        strong Sign in
-      .span6.center
-        form.form-validation.ng-pristine.ng-invalid.ng-invalid-required(name='form', ng-submit='Signin.signin()')
-          .text-danger.wrapper.text-center.ng-binding.ng-hide
-          .list-group.list-group-sm.m-b-md
-            .list-group-item
-              input.form-control.no-border.ng-pristine.ng-invalid.ng-invalid-required.ng-touched(type='text', placeholder='Email or username', ng-model='Signin.user.username', required='required', autofocus='true')
-            .list-group-item
-              input.form-control.no-border.ng-pristine.ng-untouched.ng-invalid.ng-invalid-required(type='password', placeholder='Password', ng-model='Signin.user.password', required='required')
-          button.btn.btn-lg.btn-primary.btn-block(type='submit') Log in
-      br
-      .wrapper-md.text-center
-        a.text-info(ui-sref='') Forgot password?
+// contact
+section#contact.section-padding
+  .container
+    .row
+      .col-md-12
+        h2.ser-title Contact us
+        hr.botm-line
+      .col-md-4.col-sm-4
+        h3 Contact Info
+        .space
+        p
+          i.fa.fa-map-marker.fa-fw.pull-left.fa-2x
+          | 321 Awesome Street
+          br
+          |   			        New York, NY 17022
+        .space
+        p
+          i.fa.fa-envelope-o.fa-fw.pull-left.fa-2x
+          | info@companyname.com
+        .space
+        p
+          i.fa.fa-phone.fa-fw.pull-left.fa-2x
+          | +1 800 123 1234
+      .col-md-8.col-sm-8.marb20
+        .contact-info
+          h3.cnt-ttl Having Any Query! Or Book an appointment
+          .space
+          #sendmessage Your message has been sent. Thank you!
+          #errormessage
+          form.contactForm(action='', method='post', role='form')
+            .form-group
+              input#name.form-control.br-radius-zero(type='text', name='name', placeholder='Your Name', data-rule='minlen:4', data-msg='Please enter at least 4 chars')
+              .validation
+            .form-group
+              input#email.form-control.br-radius-zero(type='email', name='email', placeholder='Your Email', data-rule='email', data-msg='Please enter a valid email')
+              .validation
+            .form-group
+              input#subject.form-control.br-radius-zero(type='text', name='subject', placeholder='Subject', data-rule='minlen:4', data-msg='Please enter at least 8 chars of subject')
+              .validation
+            .form-group
+              textarea.form-control.br-radius-zero(name='message', rows='5', data-rule='required', data-msg='Please write something for us', placeholder='Message')
+              .validation
+            .form-action
+              button.btn.btn-form(type='submit') Send Message
+
+// register
+section#register.section-padding
+  .container
+    .row
+      .col-md-4.col-sm-4.col-md-offset-4
+        h2.ser-title Register us
+        hr.botm-line
+      .col-md-8.col-sm-8.col-md-offset-2.marb20
+        .register-info
+          .space
+          //#registermessage Your message has been sent. Thank you!
+          //#registererrormessage
+          form.contactForm(action='', method='post', role='form')
+            .form-group
+              select#sel1.form-control
+                option Profile Created By
+                option Mother
+                option Father
+                option Sister
+                option Brother
+              .validation
+            .form-group
+              input#registername.form-control.br-radius-zero(type='text', name='name', placeholder='Your Name', data-rule='name', data-msg='Please enter the name')
+              .validation
+            .form-group
+                input(type='radio', value='',name='male')
+                |   Male
+                input(type='radio', value='',name='female')
+                |   Female
+            .form-group
+              textarea.form-control.br-radius-zero(name='message', rows='5', data-rule='required', data-msg='Please write something for us', placeholder='Message')
+              .validation
+            .form-group
+              select#MaritalStatus.form-control
+                option Marital Status
+                option Male
+                option Female
+              .validation
+            .form-group
+              select#subCast.form-control
+                option Mother Tongue
+                option Marathi
+                option Hindi
+              .validation
+            .form-group
+              select#Country.form-control
+                option Country Living In
+                option India
+              .validation
+            .form-group
+              input#MobileNumber.form-control.br-radius-zero(type='number', name='number', placeholder='Mobile Number', data-msg='Please enter Mobile No')
+              .validation
+            .form-group
+              input#Password.form-control.br-radius-zero(type='Password', name='Password', placeholder='Password', data-msg='Please enter Password')
+              .validation
+            .form-action
+              button.btn.btn-form(type='submit') Register
